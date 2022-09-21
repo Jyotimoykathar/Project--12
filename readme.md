@@ -25,8 +25,8 @@ This is the 12th responsive-challenge among the 15 Ineuron-projects.
 
 ### Links
 
-- Code File URL: [github.com](https://github.com/Jyotimoykathar/Project-02)
-- Live Site URL: [netlify.app](https://project-02-restaurant.netlify.app/)
+- Code File URL: [github.com](https://github.com/Jyotimoykathar/Project--12)
+- Live Site URL: [netlify.app](https://project-12-business-solution.netlify.app/)
 
 ## My process
 
