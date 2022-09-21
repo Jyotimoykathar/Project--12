@@ -1,0 +1,604 @@
+/* general components */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /* 10px/16px = 0.625 */
+}
+
+body {
+  max-width: 160rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+/* reusable components */
+.container {
+  max-width: 140rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 4.6rem;
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.bottom-margin-small {
+  margin-bottom: 9.6rem;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.heading-quaternary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 7.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+  color: #fff;
+}
+.heading-secondary {
+  font-size: 5.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  text-align: center;
+  padding: 0 25rem;
+}
+.heading-tertiary {
+  font-size: 4.2rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  padding-right: 4.8rem;
+}
+.heading-quaternary {
+  font-size: 2rem;
+  margin-top: 2.6rem;
+  padding: 3rem 0;
+}
+.subheading {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+small {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+  padding-right: 5.2rem;
+}
+/* class to center any individual element */
+.center {
+  text-align: center;
+}
+
+.color-white {
+  color: white;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.4rem 3.4rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: #8bb7a2;
+  color: #fff;
+}
+
+/* ************* */
+/* HEADER SECTION */
+/* ************* */
+.header {
+  background-color: #636c79;
+  padding: 2.4rem 12.8rem;
+  position: relative;
+}
+.logo-box {
+  width: 14rem;
+}
+.white-logo {
+  width: 100%;
+}
+/* navigation section */
+.nav-list {
+  list-style: none;
+}
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.7s;
+}
+
+.nav-link.nav-cta:link,
+.nav-link.nav-cta:visited {
+  padding: 0.8rem 3.2rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.btn-mobile-nav {
+  display: none;
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  right: 5rem;
+  background: none;
+  border: none;
+}
+
+/* ************* */
+/* HERO SECTION */
+/* ************* */
+.hero {
+  background-color: #636c79;
+  padding: 7.5rem 3.2rem;
+  color: #fff;
+}
+.hero-img-box {
+  width: 60rem;
+  height: 65rem;
+}
+.hero-img {
+  height: 100%;
+  width: 95%;
+  object-fit: cover;
+  object-position: center;
+}
+.mail-box {
+  position: relative;
+}
+.mail-input {
+  display: block;
+  padding: 2rem 6rem;
+  padding-right: 38rem;
+}
+.mail-icon {
+  font-size: 2rem;
+  position: absolute;
+  top: 2.2rem;
+  left: 2rem;
+  color: #000;
+  z-index: 1;
+}
+.btn-mail {
+  position: absolute;
+  right: 1.8rem;
+  top: 0.2rem;
+}
+
+/* ************************/
+/* TARGET-CONNECT SECTION */
+/* ************************/
+
+.section-target {
+  padding: 9.6rem 3.2rem;
+}
+.connect-img-box {
+  height: 600px;
+  width: 100%;
+}
+.connect-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ********************* */
+/* CARRIER-EASY SECTION */
+/* ********************* */
+.carrier-image-box {
+  width: 54rem;
+  height: 55rem;
+}
+.carrier-right-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+.carrier-right-image2 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.carrier-left-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ************* */
+/* TEAM SECTION */
+/* ************* */
+.team-section {
+  padding: 7.5rem 3.2rem;
+}
+.team-section img {
+  width: 100%;
+}
+
+/* ************* */
+/* FOOTER SECTION */
+/* ************* */
+.footer-section {
+  background-color: #10181d;
+  padding: 9.6rem 3.2rem;
+}
+.footer-box {
+  margin-bottom: 3.6rem;
+}
+.footer-logo {
+  width: 13rem;
+}
+.footer-nav-box {
+  justify-self: end;
+}
+.footer-nav-icon {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  cursor: pointer;
+}
+.footer-nav {
+  list-style: none;
+  color: #888;
+  font-size: 1.4rem;
+}
+.footer-nav-link {
+  margin-bottom: 1.4rem;
+}
+.footer-social-icons {
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 1.6rem;
+  background: #333;
+  border-radius: 50%;
+}
+
+/* ************** */
+/* MEDIA QUERIES */
+/* ************** */
+/* Below 1344px(Smaller desktop) */
+@media (max-width: 84em) {
+  .heading-primary {
+    font-size: 5.6rem;
+    line-height: 1.05;
+  }
+  .mail-input {
+    display: inline-block;
+    padding: 1.8rem 6rem;
+    padding-right: 22rem;
+  }
+  .mail-icon {
+    font-size: 1.8rem;
+    top: 2.2rem;
+    left: 2rem;
+  }
+  .btn-mail {
+    right: 0.8rem;
+    top: 0.1rem;
+  }
+  .nav-list.flex-row {
+    gap: 1.7rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 1.4rem;
+  }
+
+  .nav-link.nav-cta:link,
+  .nav-link.nav-cta:visited {
+    padding: 0.6rem 2.5rem;
+  }
+  .header {
+    padding: 2.4rem 9rem;
+  }
+}
+
+/* Below 1200px(Landscape Tablets) */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .grid {
+    column-gap: 4.4rem;
+  }
+  .heading-primary {
+    font-size: 4.8rem;
+    line-height: 1.03;
+  }
+  .heading-secondary {
+    font-size: 5.2rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+    padding: 0 16rem;
+  }
+  .heading-tertiary {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+    padding-right: 4.8rem;
+  }
+  .nav-list.flex-row {
+    gap: 1.2rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 1.3rem;
+  }
+  .nav-link.nav-cta:link,
+  .nav-link.nav-cta:visited {
+    padding: 0.6rem 2rem;
+  }
+  .hero-img-box {
+    width: 57rem;
+    height: 62rem;
+  }
+  .hero-img {
+    height: 100%;
+    width: 94%;
+  }
+  .mail-input {
+    padding: 1.3rem 4.6rem;
+    padding-right: 17rem;
+  }
+  .mail-icon {
+    font-size: 1.8rem;
+    top: 2.2rem;
+    left: 2rem;
+  }
+  .btn-mail {
+    right: 1rem;
+    top: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.2rem 3.4rem;
+  }
+  .subheading {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+  }
+  .description {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 4.8rem;
+    padding-right: 4.3rem;
+  }
+}
+/* Below 944px (Tablets) */
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .grid {
+    column-gap: 3.4rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    display: none;
+  }
+  .btn-mobile-nav {
+    display: block;
+  }
+  .heading-secondary {
+    font-size: 5.2rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+    padding: 0 12rem;
+  }
+  .heading-tertiary {
+    font-size: 3.8rem;
+    line-height: 1;
+    margin-bottom: 2.6rem;
+    padding-right: 4.2rem;
+  }
+  .hero-img-box {
+    width: 40rem;
+    height: 55rem;
+  }
+  .hero-img {
+    height: 100%;
+    width: 94%;
+  }
+  .mail-input {
+    padding: 1.3rem 4.6rem;
+    padding-right: 10rem;
+  }
+  .mail-icon {
+    font-size: 1.8rem;
+    top: 2.2rem;
+    left: 2rem;
+  }
+  .btn-mail {
+    right: 0.5rem;
+    top: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.2rem 3.4rem;
+  }
+}
+
+/* Below 704px(smaller tablets) */
+@media (max-width: 44em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-box {
+    position: absolute;
+    left: 4rem;
+    top: 2rem;
+    width: 14rem;
+  }
+  .btn-mobile-nav {
+    font-size: 5rem;
+    top: 2rem;
+  }
+  .mail-input {
+    padding: 1.2rem 4.6rem;
+    padding-right: 33rem;
+  }
+  .mail-icon {
+    font-size: 1.6rem;
+    top: 1.6rem;
+    left: 2rem;
+  }
+  .btn-mail {
+    right: 1rem;
+    top: 0.1rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 3.4rem;
+  }
+  .subheading {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+  }
+  .description {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 4.6rem;
+    padding-right: 4.3rem;
+  }
+  .heading-secondary {
+    font-size: 4.8rem;
+    line-height: 1;
+    margin-bottom: 9.6rem;
+    padding: 0 8rem;
+  }
+  .heading-tertiary {
+    font-size: 3.8rem;
+    line-height: 1;
+    margin: 2.6rem 0;
+    text-align: center;
+  }
+  .hero-img-box {
+    width: 56rem;
+    height: 58rem;
+    margin-bottom: 2rem;
+  }
+  .hero-img {
+    height: 100%;
+    width: 94%;
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2.6rem;
+  }
+  .grid--5-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-logo-box {
+    position: absolute;
+    left: 3rem;
+  }
+}
+/* Below 544px(Phones) */
+@media (max-width: 34em) {
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading-secondary {
+    font-size: 3.8rem;
+    line-height: 1;
+    margin-bottom: 4.6rem;
+    padding: 0 2rem;
+  }
+  .description {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 4.6rem;
+    text-align: center;
+    /* padding-right: 4.3rem; */
+    padding: 0 1rem;
+  }
+  .hero-img-box {
+    width: 40rem;
+    height: 55rem;
+    margin-bottom: 2rem;
+  }
+  .hero-img {
+    height: 100%;
+    width: 94%;
+  }
+  .mail-input {
+    padding: 0.8rem 4.6rem;
+    padding-right: 11rem;
+  }
+  .mail-icon {
+    font-size: 1.6rem;
+    top: 1.6rem;
+    left: 2rem;
+  }
+  .btn-mail {
+    right: 2.4rem;
+    top: 0.1rem;
+    font-size: 1.6rem;
+    padding: 0.8rem 2.6rem;
+  }
+  .carrier-image-box {
+    width: 50rem;
+    height: 52rem;
+  }
+  .footer-nav-icon {
+    gap: 1rem;
+  }
+  .footer-social-icons {
+    font-size: 1.2rem;
+    padding: 1.4rem;
+  }
+}
